@@ -11,6 +11,7 @@ export default function Footer() {
                 Powered by{' '}
                 <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
                 </a>
+                <a href="/api/auth/logout">Logout</a>
             </footer>
         </>
     )
