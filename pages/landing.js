@@ -1,5 +1,6 @@
 import Header from '../components/header'
 import Nav from '../components/nav'
+import DataContainer from '../components/data-container'
 import Footer from '../components/footer'
 
 export default function Landing() {
@@ -16,6 +17,7 @@ export default function Landing() {
                         Next.js!
                     </a>
                     </h1>
+                    <DataContainer/>
                 </main>
                     
                 <Footer/>
