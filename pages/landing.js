@@ -6,15 +6,11 @@ import Footer from '../components/footer'
 
 export default function Landing() {
 
-    function handleClick(e) {
-        e.preventDefault()
-        window.location.href = e.target.getAttribute('href')
-    }
+    // const LoginButton = () => {
+    //     const { loginWithRedirect, isAuthenticated } = useAuth0();
+    // }
 
-    function loginModal(e) {
-        e.preventDefault()
-        window.location.href = '/login'
-    }
+    // onClick={() => loginWithRedirect()}
 
     return (
         <>
@@ -31,7 +27,7 @@ export default function Landing() {
                     </h1>
                     <div className="flex px-6 py-10 mx-10 my-4 text-lg font-bold text-gray-400">
                         <button className="p-6 m-4 border-2">
-                            <a href="https://www.google.com" >
+                            <a href="/api/auth/login">
                                 Student Login
                             </a>
                         </button>
