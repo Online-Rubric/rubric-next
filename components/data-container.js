@@ -1,11 +1,12 @@
 import useSWR from 'swr'
 import axios from 'axios'
+import { UserContext } from '@auth0/nextjs-auth0';
 
 async function fetcher(url) {
     const result = await axios.get(url);
     return result.data;
 }
-export default function DataContainer() {
+export default function DataContainer(props) {
     // const { data, error } = useSWR('./pages/api/data', fetcher)
     const { data, error } = useSWR('../api/data', fetcher)
 
@@ -15,6 +16,9 @@ export default function DataContainer() {
     return (
             <section>
                 <h1>API DATA</h1>
+                <p>
+                    {props.user.email}
+                </p>
                 <ul>
                     {data.map(board => (
                         <li>Student: {board.student} - Interviewer: {board.interviewer}</li>

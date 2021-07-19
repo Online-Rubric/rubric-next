@@ -37,7 +37,6 @@ export default function Landing() {
                             </a>
                         </button>
                     </div>
-                    <DataContainer/>
                 </main>
                     
                 <Footer/>
