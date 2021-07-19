@@ -11,10 +11,10 @@ export default function RubricForm(props) {
     // }
 
     return (
-        <div>
-            <legend>New Rubric</legend>
+        <div className="bg-gray-200">
+            <legend className="px-3 py-3 text-2xl text-center bg-gray-400"></legend>
             <form>
-                <div id="top_level">
+                <div id="top_level" className="flex flex-wrap m-auto bg-gray-400">
                     <p>Student</p>
                     <input name="student" id="student" type="text" />
                     <p>Proctor</p>
@@ -33,7 +33,7 @@ export default function RubricForm(props) {
                         <p>Interpreted the Question</p>
                         <p>Section Points</p>
                         <p>Earned</p>
-                        <p>Possible</p>
+                        <p>Possible 10</p>
                         <p>Asked meaningful clarifying questions</p>
                         <p>Possible Points = 2</p>
                         <input name="clarify_question" id="clarify_question" type="number" max="2" />
@@ -54,7 +54,7 @@ export default function RubricForm(props) {
                         <p>Solved the technical problem</p>
                         <p>Section Points</p>
                         <p>Earned</p>
-                        <p>Possible</p>
+                        <p>Possible 12</p>
                         <p>Presented and understood a working algorithm</p>
                         <p>Possible Points = 4</p>
                         <input name="clarify_question" id="clarify_question" type="number" max="4" />
@@ -75,7 +75,7 @@ export default function RubricForm(props) {
                         <p>Analyzed the proposed solution</p>
                         <p>Section Points</p>
                         <p>Earned</p>
-                        <p>Possible</p>
+                        <p>Possible 6</p>
                         <p>Stepped through their solution</p>
                         <p>Possible Points = 2</p>
                         <input name="walkthrough_solution" id="walkthrough_solution" type="number" max="2" />
@@ -93,7 +93,7 @@ export default function RubricForm(props) {
                         <p>Communicated effectively throughout</p>
                         <p>Section Points</p>
                         <p>Earned</p>
-                        <p>Possible</p>
+                        <p>Possible 12</p>
                         <p>Verbalized their thought process</p>
                         <p>Possible Points = 6</p>
                         <input name="thought_process" id="thought_process" type="number" max="6" />
