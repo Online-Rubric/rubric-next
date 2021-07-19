@@ -2,6 +2,8 @@ import Header from '../components/header'
 import Nav from '../components/nav'
 import DataContainer from '../components/data-container'
 import Footer from '../components/footer'
+import Link from 'next/link'
+
 
 
 export default function Landing() {
@@ -32,9 +34,9 @@ export default function Landing() {
                             </a>
                         </button>
                         <button className="p-6 m-4 border-2" >
-                            <a href="https://www.google.com" className="text-lg">
-                                Grade a Student
-                            </a>
+                            <Link href="/form">
+                            <a>Grade a Student</a>
+                            </Link>
                         </button>
                     </div>
                 </main>
