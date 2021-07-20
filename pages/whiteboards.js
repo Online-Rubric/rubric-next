@@ -1,7 +1,7 @@
 import Header from '../components/header'
-import Nav from '../components/nav'
+import DashNav from '../components/dashboard-nav'
 import DataContainer from '../components/data-container'
-import Footer from '../components/footer'
+import LeftBar from '../components/dashboard-leftbar'
 import { useUser } from '@auth0/nextjs-auth0';
 
 
@@ -15,14 +15,16 @@ export default function Whitebaords() {
         user && (
             <>
                 <Header/>
-                <Nav/>
-                <DataContainer user={user}/>
-                <div>
-                    <img src={user.picture} alt={user.name} />
-                    <h2>{user.name}</h2>
-                    <p>{user.email}</p>
+                <DashNav user={user}/>
+                <div class="flex flex-col md:flex-row">
+                    <LeftBar user={user}/>
+                    <DataContainer user={user}/>
+                    {/* <div>
+                        <img src={user.picture} alt={user.name} />
+                        <h2>{user.name}</h2>
+                        <p>{user.email}</p>
+                    </div> */}
                 </div>
-                <Footer/>
             </>
         )
     );
