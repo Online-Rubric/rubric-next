@@ -1,4 +1,7 @@
+import axios from 'axios'
+
 export default function RubricForm(props) {
+
 
     function submitHandler(event) {
         event.preventDefault();
@@ -29,6 +32,10 @@ export default function RubricForm(props) {
         rubricInfo.underconfident = parseInt(event.target.underconfident.value);
         rubricInfo.whiteboard = parseInt(event.target.whiteboard.value);
         rubricInfo.communicate_effectively_notes = event.target.communicate_effectively_notes.value
+
+        console.log(rubricInfo)
+        props.apiPost(rubricInfo)
+        
     }
 
     return (

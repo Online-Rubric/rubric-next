@@ -8,12 +8,6 @@ import Link from 'next/link'
 
 export default function Landing() {
 
-    // const LoginButton = () => {
-    //     const { loginWithRedirect, isAuthenticated } = useAuth0();
-    // }
-
-    // onClick={() => loginWithRedirect()}
-
     return (
         <>
             <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-400">
@@ -29,9 +23,9 @@ export default function Landing() {
                     </h1>
                     <div className="flex px-6 py-10 mx-10 my-4 text-lg font-bold text-gray-300">
                         <button className="p-6 m-4 border-2">
-                            <a href="/api/auth/login">
-                                Student Login
-                            </a>
+                            <Link href="/whiteboards">
+                                <a>Student Login</a>
+                            </Link>
                         </button>
                         <button className="p-6 m-4 border-2" >
                             <Link href="/form">
