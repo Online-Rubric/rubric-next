@@ -1,19 +1,40 @@
 export default function RubricForm(props) {
 
-    // function submitHandler(event) {
-    //     event.preventDefault();
-    //     const rubricInfo = {};
-    //     rubricInfo.xxx = event.target.xxx.value;
-    //     rubricInfo.xxx = event.target.xxx.value;
-    //     rubricInfo.xxx = event.target.xxx.value;
-    //     rubricInfo.xxg = event.target.xxx.value;
-    //     props.onRubricCreate(rubricInfo)
-    // }
+    function submitHandler(event) {
+        event.preventDefault();
+        const rubricInfo = {};
+        rubricInfo.student = event.target.student.value;
+        rubricInfo.proctor = event.target.proctor.value;
+        rubricInfo.time_start = event.target.time_start.value;
+        rubricInfo.time_end = event.target.time_end.value;
+        rubricInfo.challenge = event.target.challenge.value;
+        rubricInfo.clarify_question = parseInt(event.target.clarify_question.value);
+        rubricInfo.inputs_outputs = parseInt(event.target.inputs_outputs.value);
+        rubricInfo.illustrate_problem = parseInt(event.target.illustrate_problem.value);
+        rubricInfo.optimal_structure = parseInt(event.target.optimal_structure.value);
+        rubricInfo.interpret_question_notes = event.target.interpret_question_notes.value
+        rubricInfo.working_algorithm = parseInt(event.target.working_algorithm.value);
+        rubricInfo.syntactically_correct = parseInt(event.target.syntactically_correct.value);
+        rubricInfo.idiomatically_correct = parseInt(event.target.idiomatically_correct.value);
+        rubricInfo.best_solution = parseInt(event.target.best_solution.value);
+        rubricInfo.solve_problem_notes = event.target.solve_problem_notes.value
+        rubricInfo.walkthrough_solution = parseInt(event.target.walkthrough_solution.value);
+        rubricInfo.big_o = parseInt(event.target.big_o.value);
+        rubricInfo.testing = parseInt(event.target.testing.value);
+        rubricInfo.analyze_solution_notes = event.target.analyze_solution_notes.value
+        rubricInfo.thought_process = parseInt(event.target.thought_process.value);
+        rubricInfo.terminology = parseInt(event.target.terminology.value);
+        rubricInfo.use_time = parseInt(event.target.use_time.value);
+        rubricInfo.overconfident = parseInt(event.target.overconfident.value);
+        rubricInfo.underconfident = parseInt(event.target.underconfident.value);
+        rubricInfo.whiteboard = parseInt(event.target.whiteboard.value);
+        rubricInfo.communicate_effectively_notes = event.target.communicate_effectively_notes.value
+    }
 
     return (
         <div className="bg-gray-200">
             <legend className="px-3 py-3 text-2xl text-center bg-gray-400"></legend>
-            <form>
+            <form onSubmit={submitHandler}>
                 <div id="top_level" className="flex flex-wrap m-auto bg-gray-400">
                     <p>Student</p>
                     <input name="student" id="student" type="text" />
@@ -57,7 +78,7 @@ export default function RubricForm(props) {
                         <p>Possible 12</p>
                         <p>Presented and understood a working algorithm</p>
                         <p>Possible Points = 4</p>
-                        <input name="clarify_question" id="clarify_question" type="number" max="4" />
+                        <input name="working_algorithm" id="working_algorithm" type="number" max="4" />
                         <p>Final code was syntactically correct</p>
                         <p>Possible Points = 3</p>
                         <input name="syntactically_correct" id="syntactically_correct" type="number" max="3"/>
@@ -115,6 +136,7 @@ export default function RubricForm(props) {
                         <p>Notes</p>
                         <input name="communicate_effectively_notes" id="communicate_effectively_notes" type="text" />
                     </div>
+                    <button className="px-20 py-3 bg-green-500 rounded w-max">Submit</button>
                 </div>
             </form>
         </div>
