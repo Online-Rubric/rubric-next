@@ -14,7 +14,7 @@ export default function Landing() {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-500">
+            <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-400">
                 <Header/>
                 <Nav/>
 
@@ -25,7 +25,7 @@ export default function Landing() {
                         Rubric
                     </h2>
                     </h1>
-                    <div className="flex px-6 py-10 mx-10 my-4 text-lg font-bold text-gray-400">
+                    <div className="flex px-6 py-10 mx-10 my-4 text-lg font-bold text-gray-300">
                         <button className="p-6 m-4 border-2">
                             <a href="/api/auth/login">
                                 Student Login
@@ -37,7 +37,7 @@ export default function Landing() {
                             </a>
                         </button>
                     </div>
-                    <DataContainer/>
+                    {/* <DataContainer/> */}
                 </main>
                     
                 <Footer/>
