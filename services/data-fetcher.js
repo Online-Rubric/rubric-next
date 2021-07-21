@@ -1,12 +1,15 @@
 import axios from 'axios'
 import useSWR from 'swr'
 
-const baseUrl = 'https://rubric-api-project.herokuapp.com/';
+const baseUrl = 'http://127.0.0.1:8000/';
 const tokenUrl = baseUrl + '/api/token/';
 const refreshUrl = tokenUrl + 'refresh/';
 export const apiUrl = baseUrl + '/api/v1/rubrics/';
 
+
+// Use a patch method instead of post?
 // get a JSON Web Token from server
+
 export async function getToken(values) {
 
     const response = await axios.post(tokenUrl, values);
@@ -15,6 +18,7 @@ export async function getToken(values) {
 
     return refreshResponse.data.access;
 }
+
 
 // expose useRubrics with token enclosed
 export async function fetcher(values) {
