@@ -185,7 +185,7 @@ export default function RubricForm(props) {
                         <td className="flex-auto">Notes</td>
                     </tr>
                     <tr className="flex justify-start">
-                        <td className="flex-auto"><input name="interpret_question_notes" id="interpret_question_notes" type="text" /></td>
+                        <td className="flex-auto"><input name="analyze_solution_notes" id="analyze_solution_notes" type="text" /></td>
                     </tr>
                     {/* start section */}
                     {/* -----Communicated effectively throughout----- */}
