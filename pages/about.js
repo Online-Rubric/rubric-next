@@ -10,7 +10,7 @@ export default function About() {
             <Nav/>
 
 
-            <div className="items-center justify-center m-auto my-4 text-3xl">ABOUT THE DEVELOPERS</div>
+            <div className="items-center justify-center m-auto my-4 text-3xl font-bold">ABOUT THE DEVELOPERS</div>
             <main className="flex items-center justify-center flex-1 w-full px-20 text-center">
 
 
