@@ -15,15 +15,12 @@ export default function Whitebaords() {
 
     const apiData = async () => {
       const res = await axios.get('http://127.0.0.1:8000/api/v1/rubrics/')
-
-      console.log(res.data)
-      for (let i = 0; i < res.data.length; i++) {
-        res.data[i].id = i
-        console.log(i)
-      }
+      
+      res.data.map(item => {
+          console.log('this is rubrics' + item.comments)
+    })
+        // console.log('this is rubrics' + rubrics)
     }
-
-
 
 
 
@@ -46,7 +43,22 @@ export default function Whitebaords() {
                             Show Previous Scores
                         </button>
                     </div>
+
                 </div>
+
+            <>
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    <tbody id="myTable">
+                        
+                    </tbody>
+                    
+                </table>
+            </>
+
+
             </>
     )
 }
