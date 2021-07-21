@@ -22,16 +22,15 @@ export default function Landing() {
                     </h2>
                     </h1>
                     <div className="flex px-6 py-10 mx-10 my-4 text-lg font-bold text-gray-300">
-                        <button className="p-6 m-4 border-2">
-                            <Link href="/whiteboards">
-                                <a>Student Login</a>
-                            </Link>
-                        </button>
-                        <button className="p-6 m-4 border-2" >
-                            <Link href="/form">
-                            <a>Grade a Student</a>
-                            </Link>
-                        </button>
+
+                        <Link href="/whiteboards">
+                            <button className="p-6 m-4 border-2">Student Login</button>
+                        </Link>
+
+                        <Link href="/form">
+                            <button className="p-6 m-4 border-2">Grade a Student</button>
+                        </Link>
+
                     </div>
                     {/* <DataContainer/> */}
                 </main>
