@@ -18,10 +18,10 @@ export default function Whitebaords() {
       
       res.data.map(item => {
           console.log('this is rubrics' + item.comments)
-    })
-        // console.log('this is rubrics' + rubrics)
+        })
     }
 
+    // TODO for each key in the key value pair, generate a table row with the key and value as the cell 
 
 
     return (
