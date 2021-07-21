@@ -16,10 +16,11 @@ export default function Whitebaords() {
 
     const apiData = async () => {
       const res = await axios.get('http://127.0.0.1:8000/api/v1/rubrics/')
+      console.log(res)
       
       res.data.map(item => {
           const json_objects = {
-            proctor:  item.proctor,
+            proctor:  item.proctor, 
             time_start : item.time_start,
             time_end : item.time_end,
             challenge: item.challenge,
@@ -51,8 +52,8 @@ export default function Whitebaords() {
         
         }
         console.log(json_objects)
-        // var student = document.getElementById('student')
-        // student.append(item.student.value)
+        // var test = document.getElementById('test')
+        // test.append(json_objects.comments)
         })
     }
 
@@ -69,10 +70,21 @@ export default function Whitebaords() {
             <main>
                 <h1>TEST</h1>
             </main>
+            <button onClick={() => apiData()}>
+                Show Previous Scores
+            </button>
+            {/* <p id="test"></p> */}
 
         </div>
     )
 }
+
+
+
+
+
+
+
 
 
 // <div class="flex flex-col md:flex-row">
@@ -85,9 +97,7 @@ export default function Whitebaords() {
 //                         <p>{user.email}</p>
 //                     </div> */}
 //                     <div className="flex m-10">
-//                         <button onClick={() => apiData()}>
-//                             Show Previous Scores
-//                         </button>
+
 //                     </div>
 
 //                 </div>
