@@ -4,7 +4,7 @@ export default function Nav() {
     return (
         <>
             <header className="flex items-center w-full h-24 p-6 border-t justify-left">
-                <h1 className="w-6/12 text-2xl font-semibold">Whiteboard Rubric</h1>
+                <a href="/landing" className="w-6/12 text-2xl font-semibold">Whiteboard Rubric</a>
                 <nav className="flex justify-end w-full">
                     {/* <Link href="/">
                         <a className="mr-4">Admin View</a>
