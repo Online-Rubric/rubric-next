@@ -6,7 +6,8 @@ export default function RubricForm(props) {
     function submitHandler(event) {
         event.preventDefault();
         const rubricInfo = {};
-        rubricInfo.student = event.target.student.value;
+        // rubricInfo.student = event.target.student.value;
+        rubricInfo.student = 1;
         rubricInfo.proctor = event.target.proctor.value;
         rubricInfo.time_start = event.target.time_start.value;
         rubricInfo.time_end = event.target.time_end.value;
