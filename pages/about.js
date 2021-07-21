@@ -9,10 +9,8 @@ export default function About() {
             <Header/>
             <Nav/>
 
-
             <div className="items-center justify-center m-auto my-4 text-3xl font-bold">ABOUT THE DEVELOPERS</div>
             <main className="flex items-center justify-center flex-1 w-full px-20 text-center">
-
 
             <div className="flex flex-col object-center max-w-xs m-auto">
               <div className="flex m-2 justify-items-end">
