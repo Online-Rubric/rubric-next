@@ -3,6 +3,7 @@ import DashNav from '../components/dashboard-nav'
 import DataContainer from '../components/data-container'
 import LeftBar from '../components/dashboard-leftbar'
 // import { useUser } from '@auth0/nextjs-auth0';
+import axios from 'axios'
 
 
 export default function Whitebaords() {
@@ -12,7 +13,20 @@ export default function Whitebaords() {
     // if (isLoading) return <div>Loading...</div>;
     // if (error) return <div>{error.message}</div>;
 
-    
+    const apiData = async () => {
+      const res = await axios.get('http://127.0.0.1:8000/api/v1/rubrics/')
+
+      console.log(res.data)
+      for (let i = 0; i < res.data.length; i++) {
+        res.data[i].id = i
+        console.log(i)
+      }
+    }
+
+
+
+
+
     return (
         // user && (
             <>
@@ -27,6 +41,11 @@ export default function Whitebaords() {
                         <h2>{user.name}</h2>
                         <p>{user.email}</p>
                     </div> */}
+                    <div className="flex m-10">
+                        <button onClick={() => apiData()}>
+                            Show Previous Scores
+                        </button>
+                    </div>
                 </div>
             </>
     )

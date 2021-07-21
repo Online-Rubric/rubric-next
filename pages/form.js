@@ -10,11 +10,6 @@ export default function Form() {
         await axios.post('http://127.0.0.1:8000/api/v1/rubrics/', formData);
     }
 
-    async function apiGet(){
-        const res = await axios.get('http://127.0.0.1:8000/api/v1/rubrics/')
-        console.log(res.data)
-    }
-
     
     return (
         <>
@@ -27,9 +22,7 @@ export default function Form() {
                        New Rubric
                     </h1>
                     <RubricForm apiPost={apiPost}/>
-                    <button onClick={() => apiGet()}>
-                        Get Rubrics
-                    </button>
+
                 </main>
                     
                 <Footer/>
