@@ -3,32 +3,45 @@ export default function RubricForm(props) {
     function submitHandler(event) {
         event.preventDefault();
         const rubricInfo = {};
-        rubricInfo.student = event.target.student.value;
-        rubricInfo.proctor = event.target.proctor.value;
-        rubricInfo.time_start = event.target.time_start.value;
-        rubricInfo.time_end = event.target.time_end.value;
-        rubricInfo.challenge = event.target.challenge.value;
-        rubricInfo.clarify_question = parseInt(event.target.clarify_question.value);
-        rubricInfo.inputs_outputs = parseInt(event.target.inputs_outputs.value);
-        rubricInfo.illustrate_problem = parseInt(event.target.illustrate_problem.value);
-        rubricInfo.optimal_structure = parseInt(event.target.optimal_structure.value);
-        rubricInfo.interpret_question_notes = event.target.interpret_question_notes.value
-        rubricInfo.working_algorithm = parseInt(event.target.working_algorithm.value);
-        rubricInfo.syntactically_correct = parseInt(event.target.syntactically_correct.value);
-        rubricInfo.idiomatically_correct = parseInt(event.target.idiomatically_correct.value);
-        rubricInfo.best_solution = parseInt(event.target.best_solution.value);
-        rubricInfo.solve_problem_notes = event.target.solve_problem_notes.value
-        rubricInfo.walkthrough_solution = parseInt(event.target.walkthrough_solution.value);
-        rubricInfo.big_o = parseInt(event.target.big_o.value);
-        rubricInfo.testing = parseInt(event.target.testing.value);
-        rubricInfo.analyze_solution_notes = event.target.analyze_solution_notes.value
-        rubricInfo.thought_process = parseInt(event.target.thought_process.value);
-        rubricInfo.terminology = parseInt(event.target.terminology.value);
-        rubricInfo.use_time = parseInt(event.target.use_time.value);
-        rubricInfo.overconfident = parseInt(event.target.overconfident.value);
-        rubricInfo.underconfident = parseInt(event.target.underconfident.value);
-        rubricInfo.whiteboard = parseInt(event.target.whiteboard.value);
-        rubricInfo.communicate_effectively_notes = event.target.communicate_effectively_notes.value
+
+        const text_fields = [
+        "student",
+        "proctor",
+        "time_start",
+        "time_end",
+        "challenge",
+        "interpret_question_notes",
+        "solve_problem_notes",
+        "analyze_solution_notes",
+        "communicate_effectively_notes",
+        "comments"]
+
+        const score_fields = [
+        "clarify_question",
+        "inputs_outputs",
+        "illustrate_problem",
+        "optimal_structure",
+        "working_algorithm",
+        "syntactically_correct",
+        "idiomatically_correct",
+        "best_solution",
+        "walkthrough_solution",
+        "big_o",
+        "testing",
+        "thought_process",
+        "terminology",
+        "use_time",
+        "overconfident",
+        "underconfident",
+        "whiteboard"]
+        
+        for (let field of text_fields){
+            rubricInfo[field] = event.target[field].value
+        }
+        
+        for (let field of score_fields){
+            rubricInfo[field] = parseInt(event.target[field].value)
+        }
     }
 
     return (
