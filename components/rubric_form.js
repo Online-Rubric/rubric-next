@@ -51,8 +51,8 @@ export default function RubricForm(props) {
         <div className="mb-10 bg-gray-200">
         <form onSubmit={submitHandler}>
             <table className="table w-full p-4">
-                <thead className="p-4">
-                    <tr className="flex justify-between w-full p-2 m-auto bg-gray-400 border-b-4 border-black border-solid flex-nowrap">
+                <thead className="flex flex-row flex-wrap p-4">
+                    <tr className="flex flex-row justify-between w-full p-2 m-auto bg-gray-400 border-b-4 border-black border-solid flex-nowrap">
                         <th className="px-2">Student</th>
                         <th className="">
                             {/* <input name="student" id="student" type="select" /> */}
@@ -75,17 +75,19 @@ export default function RubricForm(props) {
                                 ))}
                             </select>
                         </th>
-                        <th className="px-2">Start Time</th>
-                        <th className="">
-                            <input className="p-1 w-52" name="time_start" id="time_start" type="datetime-local" />
-                        </th>
-                        <th className="px-2">End Time</th>
-                        <th className="">
-                            <input className="p-1 w-52" name="time_end" id="time_end" type="datetime-local" />
-                        </th>
                         <th className="px-2">Challenge Given</th>
                         <th className="">
                             <input className="flex items-center justify-center p-1" name="challenge" id="challenge" type="text" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th className="px-2">Start Time</th>
+                        <th className="">
+                            <input className="p-1 " name="time_start" id="time_start" type="datetime-local" />
+                        </th>
+                        <th className="px-2">End Time</th>
+                        <th className="">
+                            <input className="p-1 " name="time_end" id="time_end" type="datetime-local" />
                         </th>
                     </tr>
                 </thead>
