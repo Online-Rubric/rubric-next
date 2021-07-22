@@ -16,7 +16,7 @@ export default function Landing() {
                 <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
                     <div className="vimeo-wrapper">
                         <iframe src="https://player.vimeo.com/video/577943028?background=1&autoplay=1&loop=1&byline=0&title=0"
-                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
                     </div>
                     <div className="px-3 py-4 bg-opacity-25 border-solid bg-gray-50">
                         <h1 className="text-6xl font-bold">
