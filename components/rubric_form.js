@@ -104,7 +104,7 @@ export default function RubricForm(props) {
                         <td className="flex-1 border-b border-r border-black border-solid"></td>
                         <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">10</td>
                         <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Interpreted the Question</td>
-                        <td className="border-b border-black border-solid"></td>
+                        <td className="border-b border-r border-black border-solid"></td>
                     </tr>
                     <tr className="flex justify-start">
                         <td className="p-1 border-b border-l border-r border-black border-solid w-60"></td>
