@@ -46,6 +46,9 @@ export default function RubricForm(props) {
             rubricInfo[field] = parseInt(event.target[field].value)
         }
         props.apiPost(rubricInfo);
+        alert("Successfully Graded!");
+        event.target.reset();
+        window.scrollTo(0,0);
     }
 
     return (
