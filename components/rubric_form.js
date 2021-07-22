@@ -99,11 +99,11 @@ export default function RubricForm(props) {
                     </tr>
                     {/* start section */}
                     {/* -----Interpreted the Question----- */}
-                    <tr className="flex justify-start border-black">
+                    <tr className="flex justify-start text-gray-800 bg-blue-400 border-b-4 border-black">
                         <td className="p-1 border-b border-l border-r border-black border-solid w-60">0</td>
                         <td className="flex-1 border-b border-r border-black border-solid"></td>
                         <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">10</td>
-                        <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Interpreted the Question</td>
+                        <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Interpreted the Question</td>
                         <td className="border-b border-black border-solid"></td>
                     </tr>
                     <tr className="flex justify-start">
@@ -150,11 +150,11 @@ export default function RubricForm(props) {
                     </tr>
                     {/* start section */}
                     {/* -----Solved the technical problem----- */}
-                    <tr className="flex justify-start">
+                    <tr className="flex justify-start text-gray-800 bg-blue-400 border-b-4 border-black">
                         <td className="p-1 border-b border-l border-r border-black border-solid w-60">0</td>
                         <td className="flex-1 border-b border-r border-black border-solid"></td>
                         <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">12</td>
-                        <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Solved the technical problem</td>
+                        <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Solved the technical problem</td>
                         <td className="border-b border-r border-black border-solid"></td>
                     </tr>
                     <tr className="flex justify-start">
@@ -203,11 +203,11 @@ export default function RubricForm(props) {
                     </tr>
                     {/* start section */}
                     {/* -----Analyzed the proposed solution----- */}
-                    <tr className="flex justify-start">
+                    <tr className="flex justify-start text-gray-800 bg-blue-400 border-b-4 border-black">
                         <td className="p-1 border-b border-l border-r border-black border-solid w-60">0</td>
                         <td className="flex-1 border-b border-r border-black border-solid"></td>
                         <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">6</td>
-                        <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Analyzed the proposed solution</td>
+                        <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Analyzed the proposed solution</td>
                         <td className="border-b border-r border-black border-solid"></td>
                     </tr>
                     <tr className="flex justify-start">
@@ -245,11 +245,11 @@ export default function RubricForm(props) {
                     </tr>
                     {/* start section */}
                     {/* -----Communicated effectively throughout----- */}
-                    <tr className="flex justify-start">
+                    <tr className="flex justify-start text-gray-800 bg-blue-400 border-b-4 border-black">
                         <td className="p-1 border-b border-l border-r border-black border-solid w-60">0</td>
                         <td className="flex-1 border-b border-r border-black border-solid"></td>
                         <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">12</td>
-                        <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Communicated effectively throughout</td>
+                        <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Communicated effectively throughout</td>
                         <td className="border-b border-r border-black border-solid"></td>
                     </tr>
                     <tr className="flex justify-start">
