@@ -1,9 +1,9 @@
 import Nav from '../components/nav';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import Brian from '../data/images/brian.jpg';
-import Mason from '../data/images/mason.png';
-import Tim from '../data/images/tim.jpg';
+import brian from '../data/images/brian.jpg';
+import mason from '../data/images/mason.png';
+import tim from '../data/images/tim.jpg';
 
 export default function About() {
   return (
@@ -13,11 +13,11 @@ export default function About() {
             <Nav/>
 
             <div className="items-center justify-center m-auto my-4 text-3xl font-bold">ABOUT THE DEVELOPERS</div>
-            <main className="flex items-center justify-center flex-1 w-full px-20 text-center">
+            <main className="flex items-center justify-center flex-1 w-full px-20 mb-10 text-center">
 
             <div className="flex flex-col object-center max-w-xs m-auto">
               <div className="flex m-2 justify-items-end">
-                <img className="flex m-2 justify-items-end" src={Brian} width="300" height="450"></img>
+                <img className="flex m-2 justify-items-end" src={brian.src} width="300" height="450"/>
               </div> 
               <div>
                 <p>Brian is a fullstack software developer specializing in Python and Javascript. While serving in the United States Army; Brian gained a passion for building useful technologies that makes individuals lives easier. He wants to work for a company that values efficency and customer service, along with creating new ideas that can make people's lives easier.</p>
@@ -26,7 +26,7 @@ export default function About() {
 
             <div className="flex flex-col object-center max-w-xs m-auto">
               <div className="flex m-2 justify-items-end">
-                <img className="flex m-2 justify-items-end" src={Mason} width="300" height="450"></img>
+                <img className="flex m-2 justify-items-end" src={mason.src} width="300" height="450"/>
               </div> 
               <p>Hey, I’m Mason Aviles. I’m a software developer and have been in the front end space for 6 years.  I believe in accessible and creative technology.  I’m really passionate about being in this space because I see myself as a crafter and this is new age crafting.  I love building, creating, and watching people interact with my work.
               </p>
@@ -34,7 +34,7 @@ export default function About() {
 
             <div className="flex flex-col object-center max-w-xs m-auto">
               <div className="flex m-2 justify-items-end">
-                <img className="flex m-2 justify-items-end" src={Tim} width="300" height="450"></img>
+                <img className="flex m-2 justify-items-end" src={tim.src} width="300" height="450"/>
               </div> 
               <p>Before enrolling in Code Fellows I spent the past decade in the insurance industry. 
 
