@@ -75,7 +75,7 @@ export default function Whitebaords() {
                             <tr>
                                 <td className={cellClasses}>Presented a Working Algorithm: {rubric.working_algorithm}/4</td>
                                 <td className={cellClasses}>Correct Syntax: {rubric.syntactically_correct}/3</td>
-                                <td className={cellClasses}>idiomatically Correct: {rubric.idiomatically_correct}/3</td>
+                                <td className={cellClasses}>Idiomatically Correct: {rubric.idiomatically_correct}/3</td>
                                 <td className={cellClasses}>Code Was Best Solution: {rubric.best_solution}/2</td>
                             </tr>
                             <tr>
