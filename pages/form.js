@@ -33,7 +33,7 @@ export default function Form() {
                 <Header/>
                 <Nav/>
 
-                <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
+                <main className="flex flex-col items-center justify-center flex-1 w-full px-20 mt-10 text-center">
                     <h1 className="mb-5 text-6xl font-bold">
                        New Rubric
                     </h1>

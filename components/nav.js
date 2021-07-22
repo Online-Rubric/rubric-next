@@ -3,7 +3,7 @@ export default function Nav() {
 
     return (
         <>
-            <header className="flex items-center w-full h-16 p-6 mb-10 bg-blue-500 justify-left">
+            <header className="flex items-center w-full h-16 p-6 bg-blue-500 justify-left">
                 <a href="/landing" className="w-6/12 text-2xl font-semibold text-gray-900 hover:text-blue-200">Rubric.</a>
                 <nav className="flex items-center justify-end w-full ">
                     {/* <Link href="/">

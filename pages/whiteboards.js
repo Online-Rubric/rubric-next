@@ -25,106 +25,92 @@ export default function Whitebaords() {
         setCurrentRubrics(newRubrics);
     }
 
-    console.log(JSON.stringify(rubrics));
+    const cellClasses = "p-2 border border-black flex-1"
+    const notesCellClasses = "p-2 border-l border-t border-b border-black flex-auto"
+    const trClasses = ""
 
     return(
         <>
         <div className="flex flex-col items-center justify-start min-h-screen bg-gray-400">
             <Header/>
             <Nav/>
-            <select onChange={changeHandler}>
-                <option value={0}>---</option>
-                {students.map(student => (
-                    <option key={student.id} value={student.id}>{student.username}</option>
-                ))}
-            </select>
-            <h2>{student.username}</h2>
-            <div>
-                {currentRubrics.map( rubric => ( 
-                    // <p key={rubric.id}>
-                    //     {rubric.challenge}
-                    // </p>
-                    <table key={rubric.id}>
-                        <thead>
-                            <tr>
-                                <th> Challenge Attempted: {rubric.challenge}</th>
+            <main className="container my-5 items-left">
+                <h3 className="inline-block mr-3 text-xl">Select a Student:</h3>
+                <select onChange={changeHandler} className="inline-block p-1 mr-8 text-xl">
+                    <option value={0}>---</option>
+                    {students.map(student => (
+                        <option key={student.id} value={student.id}>{student.username}</option>
+                    ))}
+                </select>
+                {currentRubrics.map( rubric => (
+                <>
+                {/* dropdown nav */}
+                <p className="inline-block mr-3 text-xl">Select a Whiteboard:</p>
+                <select className="dropdown" className="inline-block p-1 text-xl">
+                    <option>---</option>
+                    <option>{rubric.time_start}</option>
+                    {/* <option><a className="block px-4 py-2 text-sm text-gray-700" href="" role="menuitem" tabindex="-1">---</a></option>
+                    <option><a className="block px-4 py-2 text-sm text-gray-700" href={"#"+rubric.id} role="menuitem" tabindex="-1">{rubric.time_start}</a></option> */}
+                </select>
+                <div className="flex flex-col flex-wrap">
+                    <>
+                    <table key={rubric.id} id={rubric.id} className="p-2 my-4 bg-gray-100 border border-black">
+                        <thead className="">
+                            <tr className={trClasses}>
+                                <th className={cellClasses}>Challenge Attempted: {rubric.challenge}</th>
+                                <th className={cellClasses}>Time Started: {rubric.time_start}</th>
+                                <th className={cellClasses}>Time Ended: {rubric.time_end}</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="p-2">
                             <tr>
-                                <td>Time Started: {rubric.time_start}</td>
+                                <td className={cellClasses}>Asked Clarifying Questions: {rubric.clarify_question}/2</td>
+                                <td className={cellClasses}>Identified Inputs and Outputs: {rubric.inputs_outputs}/2</td>
+                                <td className={cellClasses}>Illustrated the Problem: {rubric.illustrate_problem}/2</td>
+                                <td className={cellClasses}>Optimal Structure: {rubric.optimal_structure}/4</td>
                             </tr>
                             <tr>
-                                <td>Time Ended: {rubric.time_end}</td>
+                                <td className={notesCellClasses}><p>Notes: {rubric.interpret_question_notes}</p></td>
                             </tr>
                             <tr>
-                                <td>Asked Clarifying Questions: {rubric.clarify_question}</td>
+                                <td className={cellClasses}>Presented a Working Algorithm: {rubric.working_algorithm}/4</td>
+                                <td className={cellClasses}>Correct Syntax: {rubric.syntactically_correct}/3</td>
+                                <td className={cellClasses}>idiomatically Correct: {rubric.idiomatically_correct}/3</td>
+                                <td className={cellClasses}>Code Was Best Solution: {rubric.best_solution}/2</td>
                             </tr>
                             <tr>
-                                <td>Identified Inputs and Outputs: {rubric.inputs_outputs} </td>
+                                <td className={notesCellClasses}>Notes: {rubric.solve_problem_notes}</td>
                             </tr>
                             <tr>
-                                <td>Illustrated the Problem: {rubric.illustrate_problem}</td>
+                                <td className={cellClasses}>Walked Through Solution: {rubric.walkthrough_solution}/2</td>
+                                <td className={cellClasses}>Understood BigO: {rubric.big_o}/2</td>
+                                <td className={cellClasses}>Walkthrough Tests: {rubric.testing}/2</td>
                             </tr>
                             <tr>
-                                <td>Optimal Structure{rubric.optimal_structure}</td>
+                                <td className={notesCellClasses}>Notes: {rubric.analyze_solution_notes}</td>
                             </tr>
                             <tr>
-                                <td>Instructor Notes: {rubric.interpret_question_notes}</td>
+                                <td className={cellClasses}>Explained Thought Process: {rubric.thought_process}/6</td>
+                                <td className={cellClasses}>Used Correct Terminology: {rubric.terminology}/2</td>
+                                <td className={cellClasses}>Effective use of Time{rubric.use_time}/1</td>
+                                <td className={cellClasses}>Not Overconfident: {rubric.overconfident}/1</td>
+                                <td className={cellClasses}>Not Underconfident: {rubric.underconfident}/1</td>
                             </tr>
                             <tr>
-                                <td>Presented a Working Algorithm: {rubric.working_algorithm}</td>
+                                <td className={notesCellClasses}>Notes: {rubric.communicate_effectively_notes}</td>
                             </tr>
                             <tr>
-                                <td>Correct Syntax: {rubric.syntactically_correct}</td>
-                            </tr>
-                            <tr>
-                                <td>idiomatically Correct: {rubric.idiomatically_correct}</td>
-                            </tr>
-                            <tr>
-                                <td>Code Was Best Solution: {rubric.best_solution}</td>
-                            </tr>
-                            <tr>
-                                <td>Instructor Notes: {rubric.solve_problem_notes}</td>
-                            </tr>
-                            <tr>
-                                <td>Walked Through Solution: {rubric.walkthrough_solution}</td>
-                            </tr>
-                            <tr>
-                                <td>Understood BigO: {rubric.big_o}</td>
-                            </tr>
-                            <tr>
-                                <td>Walkthrough Tests: {rubric.testing}</td>
-                            </tr>
-                            <tr>
-                                <td>Instructor Notes: {rubric.analyze_solution_notes}</td>
-                            </tr>
-                            <tr>
-                                <td>Explained Thought Process: {rubric.thought_process}</td>
-                            </tr>
-                            <tr>
-                                <td>Used Correct Terminology: {rubric.terminology}</td>
-                            </tr>
-                            <tr>
-                                <td>Effective use of Time{rubric.use_time}</td>
-                            </tr>
-                            <tr>
-                                <td>Not Overconfident: {rubric.overconfident}</td>
-                            </tr>
-                            <tr>
-                                <td>Not Underconfident: {rubric.underconfident}</td>
-                            </tr>
-                            <tr>
-                                <td>Instructor Notes: {rubric.communicate_effectively_notes}</td>
-                            </tr>
-                            <tr>
-                                <td>Instructor Comments: {rubric.comments}</td>
+                                <td className={notesCellClasses}>Comments: {rubric.comments}</td>
                             </tr>
                         
                         </tbody>
                     </table>
+                    </>
+                </div>
+                </>
                 ))}
-            </div>
+                
+            </main>
             <FixedFooter/>
         </div>
         </>
