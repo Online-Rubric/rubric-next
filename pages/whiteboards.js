@@ -29,7 +29,7 @@ export default function Whitebaords() {
 
     return(
         <>
-        <div className="flex flex-col items-center justify-start min-h-screen py-2 bg-gray-400">
+        <div className="flex flex-col items-center justify-start min-h-screen bg-gray-400">
             <Header/>
             <Nav/>
             <select onChange={changeHandler}>
