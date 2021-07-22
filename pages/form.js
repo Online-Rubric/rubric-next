@@ -7,9 +7,9 @@ import useSWR from 'swr'
 
 export default function Form() {
 
-    // async function apiPost(formData){
-    //     await axios.post('http://127.0.0.1:8000/api/v1/rubrics/', formData);
-    // }
+    async function apiPost(formData){
+        await axios.post('http://127.0.0.1:8000/api/v1/rubrics/', formData);
+    }
 
     async function fetcher(url){
         const {data} = await axios.get(url)
@@ -37,7 +37,7 @@ export default function Form() {
                     <h1 className="mb-5 text-6xl font-bold">
                        New Rubric
                     </h1>
-                    <RubricForm students={students} proctors={proctors}/>
+                    <RubricForm apiPost={apiPost} students={students} proctors={proctors}/>
 
                 </main>
                     

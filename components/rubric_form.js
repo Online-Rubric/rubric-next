@@ -45,6 +45,7 @@ export default function RubricForm(props) {
         for (let field of score_fields){
             rubricInfo[field] = parseInt(event.target[field].value)
         }
+        props.apiPost(rubricInfo);
     }
 
     return (
@@ -243,7 +244,7 @@ export default function RubricForm(props) {
                         <td className="flex-auto">Notes</td>
                     </tr>
                     <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid ">
-                        <td className="flex-auto my-3"><input className="w-1/2 p-1" name="interpret_question_notes" id="interpret_question_notes" type="text" /></td>
+                        <td className="flex-auto my-3"><input className="w-1/2 p-1" name="analyze_solution_notes" id="analyze_solution_notes" type="text" /></td>
                     </tr>
                     {/* start section */}
                     {/* -----Communicated effectively throughout----- */}
@@ -324,9 +325,8 @@ export default function RubricForm(props) {
                         </td>
                     </tr>
                     {/* submit button */}
-                    <tr className="bg-gray-400 ">
-                        <button className="px-20 py-3 my-3 text-white bg-green-500 rounded hover:bg-green-400 w-max hover:text-black">Submit</button>
-                    </tr>
+                    <button className="px-20 py-3 my-3 text-white bg-green-500 rounded hover:bg-green-400 w-max hover:text-black">Submit</button>
+                    
                 </tbody>
             </table>
             
