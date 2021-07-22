@@ -1,16 +1,8 @@
 export default function Footer() {
     return (
         <>
-            <footer className="flex items-center justify-center w-full h-24 border-t">
-                <a
-                className="flex items-center justify-center"
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                Powered by{' '}
-                <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-                </a>
+            <footer className="fixed bottom-0 flex justify-end w-full h-10 pr-5 bg-gray-300 items-right">
+                <p className="flex items-center justify-center text-gray-500 hover:text-gray-900">Powered by Django RFW, Next.js, Tailwind.css, Elephant SQL</p>
             </footer>
         </>
     )

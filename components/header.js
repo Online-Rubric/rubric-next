@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <>
             <Head>
-                <title>Rubric</title>
+                <title>Whiteboard Rubric</title>
             </Head>
         </>
     )

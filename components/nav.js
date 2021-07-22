@@ -3,16 +3,19 @@ export default function Nav() {
 
     return (
         <>
-            <header className="flex items-center w-full h-24 p-6 border-t justify-left">
-                <a href="/landing" className="w-6/12 text-2xl font-semibold">Whiteboard Rubric</a>
-                <nav className="flex justify-end w-full">
+            <header className="flex items-center w-full h-24 p-6 mb-10 bg-gray-500 border-b justify-left">
+                <a href="/landing" className="w-6/12 text-2xl font-semibold">Rubric.</a>
+                <nav className="flex items-center justify-end w-full ">
                     {/* <Link href="/">
                         <a className="mr-4">Admin View</a>
                     </Link> */}
                     <Link className="mr-2" href="/about">
                         <a className="ml-2 text-lg">About us</a>
                     </Link>
-                    <a className="ml-2 text-lg" href="/api/auth/logout">Logout</a>
+                    <Link className="mr-2" href="https://github.com/Online-Rubric">
+                        <button className="p-2 ml-4 text-gray-200 border-2 hover:border-gray-900 hover:text-gray-100" target="_blank">See on Github</button>
+                    </Link>
+                    {/* <a className="ml-2 text-lg" href="/api/auth/logout">Logout</a> */}
                 </nav>
             </header>
             
