@@ -48,7 +48,7 @@ export default function RubricForm(props) {
     }
 
     return (
-        <div className="bg-gray-200">
+        <div className="mb-10 bg-gray-200">
         <form onSubmit={submitHandler}>
             <table className="table w-full p-4">
                 <thead className="p-4">
@@ -142,10 +142,10 @@ export default function RubricForm(props) {
                         <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Identified optimal data structure and/or algorithm</td>
                         <td className="border-b border-r border-black border-solid"></td>
                     </tr>
-                    <tr className="flex justify-start p-1">
+                    <tr className="flex justify-start p-1 border-l border-r border-black">
                         <td className="flex-auto">Notes</td>
                     </tr>
-                    <tr className="flex justify-start border-b-4 border-black border-solid">
+                    <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid">
                         <td className="flex-auto my-3"><input className="w-1/2 p-1" name="interpret_question_notes" id="interpret_question_notes" type="text" /></td>
                     </tr>
                     {/* start section */}
@@ -193,10 +193,10 @@ export default function RubricForm(props) {
                         <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Solution was the best possible option</td>
                         <td className="border-b border-r border-black border-solid"></td>
                     </tr>
-                    <tr className="flex justify-start p-1">
+                    <tr className="flex justify-start p-1 border-l border-r border-black">
                         <td className="flex-auto">Notes</td>
                     </tr>
-                    <tr className="flex justify-start border-b-4 border-black border-solid">
+                    <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid">
                         <td className="flex-auto my-3">
                             <input className="w-1/2 p-1" name="solve_problem_notes" id="solve_problem_notes" type="text" />
                         </td>
@@ -237,10 +237,10 @@ export default function RubricForm(props) {
                         <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Explain an approach to testing</td>
                         <td className="border-b border-r border-black border-solid"></td>
                     </tr>
-                    <tr className="flex justify-start p-1">
+                    <tr className="flex justify-start p-1 border-l border-r border-black">
                         <td className="flex-auto">Notes</td>
                     </tr>
-                    <tr className="flex justify-start border-b-4 border-black border-solid">
+                    <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid ">
                         <td className="flex-auto my-3"><input className="w-1/2 p-1" name="interpret_question_notes" id="interpret_question_notes" type="text" /></td>
                     </tr>
                     {/* start section */}
@@ -306,18 +306,19 @@ export default function RubricForm(props) {
                         <td className="w-1/2 px-1 py-2 text-left border-b border-black border-solid">Whiteboard was readable (penmanship and spacing)</td>
                         <td className="border-b border-r border-black border-solid"></td>
                     </tr>
-                    <tr className="flex justify-start p-1 py-2">
+                    <tr className="flex justify-start p-1 py-2 border-l border-r border-black">
                         <td className="flex-auto">Notes</td>
                     </tr>
-                    <tr className="flex justify-start border-b-4 border-black border-solid">
+                    <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid">
                         <td className="flex-auto my-3"><input className="w-1/2 p-1" name="communicate_effectively_notes" id="communicate_effectively_notes" type="text" /></td>
                     </tr>
                     {/* submit button */}
-                    <tr className="">
-                        <button className="px-20 py-3 my-3 bg-green-500 rounded w-max">Submit</button>
+                    <tr className="bg-gray-400 ">
+                        <button className="px-20 py-3 my-3 text-white bg-green-500 rounded hover:bg-green-400 w-max hover:text-black">Submit</button>
                     </tr>
                 </tbody>
             </table>
+            
             </form>
             
         </div>
