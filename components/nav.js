@@ -1,6 +1,7 @@
 import Link from 'next/link'
-export default function Nav() {
+import randomChallenges from './challenges'
 
+export default function Nav() {
     return (
         <>
             <header className="flex items-center w-full h-16 p-6 bg-blue-500 justify-left">
@@ -9,6 +10,10 @@ export default function Nav() {
                     {/* <Link href="/">
                         <a className="mr-4">Admin View</a>
                     </Link> */}
+                    <Link href={randomChallenges()} onClick={() => window.location.reload()}>
+                        <a target='_blank' className="ml-2 text-lg font-semibold text-gray-900 hover:text-blue-200">Get Challenges</a>
+                    </Link>
+                   
                     <Link href="/about">
                         <a className="ml-2 text-lg text-gray-900 hover:text-blue-200">About us</a>
                     </Link>
