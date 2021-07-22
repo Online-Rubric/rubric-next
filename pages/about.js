@@ -1,6 +1,9 @@
 import Nav from '../components/nav';
 import Header from '../components/header';
-import Footer from '../components/footer'
+import Footer from '../components/footer';
+import Brian from '../data/images/brian.jpg';
+import Mason from '../data/images/mason.png';
+import Tim from '../data/images/tim.jpg';
 
 export default function About() {
   return (
@@ -14,7 +17,7 @@ export default function About() {
 
             <div className="flex flex-col object-center max-w-xs m-auto">
               <div className="flex m-2 justify-items-end">
-                <img className="flex m-2 justify-items-end" src="/data/images/brian.jpg" width="300" height="450"></img>
+                <img className="flex m-2 justify-items-end" src={Brian} width="300" height="450"></img>
               </div> 
               <div>
                 <p>Brian is a fullstack software developer specializing in Python and Javascript. While serving in the United States Army; Brian gained a passion for building useful technologies that makes individuals lives easier. He wants to work for a company that values efficency and customer service, along with creating new ideas that can make people's lives easier.</p>
@@ -23,7 +26,7 @@ export default function About() {
 
             <div className="flex flex-col object-center max-w-xs m-auto">
               <div className="flex m-2 justify-items-end">
-                <img className="flex m-2 justify-items-end" src="data/images/mason.png" width="300" height="450"></img>
+                <img className="flex m-2 justify-items-end" src={Mason} width="300" height="450"></img>
               </div> 
               <p>Hey, I’m Mason Aviles. I’m a software developer and have been in the front end space for 6 years.  I believe in accessible and creative technology.  I’m really passionate about being in this space because I see myself as a crafter and this is new age crafting.  I love building, creating, and watching people interact with my work.
               </p>
@@ -31,9 +34,14 @@ export default function About() {
 
             <div className="flex flex-col object-center max-w-xs m-auto">
               <div className="flex m-2 justify-items-end">
-                <img className="flex m-2 justify-items-end" src="data/images/tim.JPG" width="300" height="450"></img>
+                <img className="flex m-2 justify-items-end" src={Tim} width="300" height="450"></img>
               </div> 
-              <p>TIM SORTEN YOUR DANG</p>
+              <p>Before enrolling in Code Fellows I spent the past decade in the insurance industry. 
+
+              Though I had been interested in software development (my last two jobs were at InsurTech startups) it took a pandemic before I decided to go full steam ahead with it.  
+
+              Once I finish Code Fellows I am hoping to use my newly acquired skills to make rad software - or maybe finance/insurance software - which is decidedly less rad - but still pretty awesome to me.
+              </p>
             </div>
 
             </main>
