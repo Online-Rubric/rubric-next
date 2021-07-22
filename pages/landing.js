@@ -1,7 +1,6 @@
 import Header from '../components/header'
 import Nav from '../components/nav'
-import DataContainer from '../components/data-container'
-import Footer from '../components/footer'
+import FixedFooter from '../components/fixed-footer'
 import Link from 'next/link'
 
 
@@ -35,7 +34,7 @@ export default function Landing() {
                     {/* <DataContainer/> */}
                 </main>
                     
-                <Footer/>
+                <FixedFooter/>
             </div>
         </>
     )

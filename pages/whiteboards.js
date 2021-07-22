@@ -3,7 +3,7 @@ import useSWR from 'swr'
 import { useState } from 'react';
 import Header from '../components/header'
 import Nav from '../components/nav'
-import Footer from '../components/footer'
+import FixedFooter from '../components/fixed-footer'
 
 
 export default function Whitebaords() {
@@ -125,7 +125,7 @@ export default function Whitebaords() {
                     </table>
                 ))}
             </div>
-            <Footer/>
+            <FixedFooter/>
         </div>
         </>
     )
