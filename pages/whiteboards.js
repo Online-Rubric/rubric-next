@@ -11,8 +11,9 @@ export default function Whitebaords() {
     const [ currentRubrics, setCurrentRubrics ] = useState([]);
     const [ student, setStudent ] = useState({id:-1});
 
-    const { data: students, error } = useSWR("http://127.0.0.1:8000/api/v1/rubrics/students/", fetcher);
-    const { data: rubrics, rubricError } = useSWR("http://127.0.0.1:8000/api/v1/rubrics/", fetcher);
+    const { data: students, error } = useSWR("https://rubric-api-project.herokuapp.com/api/v1/rubrics/students/", fetcher);
+
+    const { data: rubrics, rubricError } = useSWR("https://rubric-api-project.herokuapp.com/api/v1/rubrics/", fetcher);
 
     if (error || rubricError) return "error"
     if (!students || !rubrics) return "Loading..."
