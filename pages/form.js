@@ -8,7 +8,7 @@ import useSWR from 'swr'
 export default function Form() {
 
     async function apiPost(formData){
-        await axios.post('http://127.0.0.1:8000/api/v1/rubrics/', formData);
+        await axios.post('https://rubric-api-project.herokuapp.com/api/v1/rubrics/', formData);
     }
 
     async function fetcher(url){
@@ -16,8 +16,8 @@ export default function Form() {
         return data
     }
 
-    const {data: students, error} = useSWR('http://127.0.0.1:8000/api/v1/rubrics/students', fetcher)
-    const {data: proctors, error2} = useSWR('http://127.0.0.1:8000/api/v1/rubrics/proctors', fetcher)
+    const {data: students, error} = useSWR('https://rubric-api-project.herokuapp.com/api/v1/rubrics/students', fetcher)
+    const {data: proctors, error2} = useSWR('https://rubric-api-project.herokuapp.com/api/v1/rubrics/proctors', fetcher)
     
 
     if (error || error2) return "Big Oh No NO";
