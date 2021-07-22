@@ -26,6 +26,12 @@ export default function Whitebaords() {
         setCurrentRubrics(newRubrics);
     }
 
+    function handleSelect(e) {
+        window.location = process.env.ROOT + "whiteboards#" + e.target.value;
+        // window.location = "http://localhost:3000/whiteboards#" + e.target.value;
+        console.log('this is the console log ur looking for', process.env.ROOT);
+    }
+
     const cellClasses = "p-2 border border-black flex-1"
     const notesCellClasses = "p-2 border-l border-t border-b border-black flex-auto"
     const trClasses = ""
@@ -46,10 +52,10 @@ export default function Whitebaords() {
                 
                 {/* dropdown nav */}
                 <p className="inline-block mr-3 text-xl">Select a Whiteboard:</p>
-                <select className="dropdown" className="inline-block p-1 text-xl">
+                <select className="dropdown" onChange={handleSelect} className="inline-block p-1 text-xl">
                     <option>---</option>
                     {currentRubrics.map( rubric => (
-                    <option>{rubric.time_start}</option>
+                    <option key={rubric.id} value={rubric.id}>{rubric.time_start}</option>
                     ))}
                 </select>
                 {currentRubrics.map( rubric => (
