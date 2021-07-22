@@ -3,7 +3,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import brian from '../data/images/brian.jpg';
 import mason from '../data/images/mason.png';
-import tim from '../data/images/tim.jpg';
+import tim from '../data/images/tim-new.jpg';
 
 export default function About() {
   return (
