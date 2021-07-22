@@ -29,12 +29,12 @@ export default function Form() {
     
     return (
         <>
-            <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-400">
+            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-400">
                 <Header/>
                 <Nav/>
 
-                <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-                    <h1 className="text-6xl font-bold">
+                <main className="flex flex-col items-center justify-center flex-1 w-full px-20 mt-10 text-center">
+                    <h1 className="mb-5 text-6xl font-bold">
                        New Rubric
                     </h1>
                     <RubricForm students={students} proctors={proctors}/>
