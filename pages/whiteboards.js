@@ -43,16 +43,17 @@ export default function Whitebaords() {
                         <option key={student.id} value={student.id}>{student.username}</option>
                     ))}
                 </select>
-                {currentRubrics.map( rubric => (
-                <>
+                
                 {/* dropdown nav */}
                 <p className="inline-block mr-3 text-xl">Select a Whiteboard:</p>
                 <select className="dropdown" className="inline-block p-1 text-xl">
                     <option>---</option>
+                    {currentRubrics.map( rubric => (
                     <option>{rubric.time_start}</option>
-                    {/* <option><a className="block px-4 py-2 text-sm text-gray-700" href="" role="menuitem" tabindex="-1">---</a></option>
-                    <option><a className="block px-4 py-2 text-sm text-gray-700" href={"#"+rubric.id} role="menuitem" tabindex="-1">{rubric.time_start}</a></option> */}
+                    ))}
                 </select>
+                {currentRubrics.map( rubric => (
+                <>
                 <div className="flex flex-col flex-wrap">
                     <>
                     <table key={rubric.id} id={rubric.id} className="p-2 my-4 bg-gray-100 border border-black">
