@@ -55,19 +55,33 @@ export default function RubricForm(props) {
                     <tr className="flex w-full p-2 m-auto bg-gray-400 border-b-4 border-black border-solid flex-nowrap">
                         <th className="flex-1 px-2">Student</th>
                         <th className="flex-1">
-                            <input name="student" id="student" type="text" />
+                            {/* <input name="student" id="student" type="select" /> */}
+                            <select name="student">
+                                <option value={0}>---</option>
+                                {props.students.map(student => (
+                                    <option key={student.id} value={student.id}>{student.username}</option>
+                                ))}
+                            </select>
+                        
                         </th>
                         <th className="flex-1 px-2">Proctor</th>
                         <th className="flex-1">
-                            <input name="proctor" id="proctor" type="text" />
+                            {/* <input name="proctor" id="proctor" type="text" />
+                             */}
+                            <select name="proctor">
+                                <option value={0}>---</option>
+                                 {props.proctors.map(proctor => (
+                                    <option key={proctor.id} value={proctor.id}>{proctor.username}</option>
+                                ))}
+                            </select>
                         </th>
                         <th className="flex-1 px-2">Start Time</th>
                         <th className="flex-1">
-                            <input name="time_start" id="time_start" type="text" />
+                            <input name="time_start" id="time_start" type="datetime-local" />
                         </th>
                         <th className="flex-1 px-2">End Time</th>
                         <th className="flex-1">
-                            <input name="time_end" id="time_end" type="text" />
+                            <input name="time_end" id="time_end" type="datetime-local" />
                         </th>
                         <th className="flex-1 px-2">Challenge Given</th>
                         <th className="flex-1">

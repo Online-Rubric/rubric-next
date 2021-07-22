@@ -1,7 +1,6 @@
 import axios from 'axios'
 import useSWR from 'swr'
 import { useState } from 'react';
-import { set } from 'lodash';
 
 
 export default function Whitebaords() {

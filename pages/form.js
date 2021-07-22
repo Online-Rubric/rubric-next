@@ -3,17 +3,33 @@ import Nav from '../components/nav'
 import RubricForm from '../components/rubric_form'
 import Footer from '../components/footer'
 import axios from 'axios'
+import useSWR from 'swr'
 
 export default function Form() {
 
-    async function apiPost(formData){
-        await axios.post('http://127.0.0.1:8000/api/v1/rubrics/', formData);
+    // async function apiPost(formData){
+    //     await axios.post('http://127.0.0.1:8000/api/v1/rubrics/', formData);
+    // }
+
+    async function fetcher(url){
+        const {data} = await axios.get(url)
+        return data
     }
+
+    const {data: students, error} = useSWR('http://127.0.0.1:8000/api/v1/rubrics/students', fetcher)
+    const {data: proctors, error2} = useSWR('http://127.0.0.1:8000/api/v1/rubrics/proctors', fetcher)
+    
+
+    if (error || error2) return "Big Oh No NO";
+    if (!students) return "Loading Students...."
+    if (!proctors) return "Loading Proctor..."
+
+    console.log(JSON.stringify(students) + " OBJECT? " + JSON.stringify(proctors))
 
     
     return (
         <>
-            <div className="flex flex-col items-center justify-center min-h-screen py-2">
+            <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-400">
                 <Header/>
                 <Nav/>
 
@@ -21,7 +37,7 @@ export default function Form() {
                     <h1 className="text-6xl font-bold">
                        New Rubric
                     </h1>
-                    <RubricForm apiPost={apiPost}/>
+                    <RubricForm students={students} proctors={proctors}/>
 
                 </main>
                     
