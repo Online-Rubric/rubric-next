@@ -45,7 +45,7 @@ export default function Whitebaords() {
         <div className="flex flex-col items-center justify-start min-h-screen bg-gray-200">
             <Header/>
             <Nav/>
-            <main className="container my-5 items-left">
+            <main className="container my-5 mb-10 items-left">
                 <h3 className="inline-block mr-3 text-xl">Select a Student:</h3>
                 <select onChange={changeHandler} className="inline-block p-1 mr-8 text-xl">
                     <option value={0}>---</option>
