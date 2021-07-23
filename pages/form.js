@@ -4,6 +4,7 @@ import RubricForm from '../components/rubric_form'
 import Footer from '../components/footer'
 import axios from 'axios'
 import useSWR from 'swr'
+import Loading from './loading'
 
 export default function Form() {
 
@@ -21,8 +22,8 @@ export default function Form() {
     
 
     if (error || error2) return "Big Oh No NO";
-    if (!students) return "Loading Students...."
-    if (!proctors) return "Loading Proctor..."
+    if (!students) return <Loading/>
+    if (!proctors) return <Loading/>
 
     console.log(JSON.stringify(students) + " OBJECT? " + JSON.stringify(proctors))
 

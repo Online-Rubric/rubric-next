@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '../components/header'
 import Nav from '../components/nav'
 import FixedFooter from '../components/fixed-footer'
+import Loading from './loading'
 
 
 export default function Whitebaords() {
@@ -16,7 +17,7 @@ export default function Whitebaords() {
     const { data: rubrics, rubricError } = useSWR("https://rubric-api-project.herokuapp.com/api/v1/rubrics/", fetcher);
 
     if (error || rubricError) return "error"
-    if (!students || !rubrics) return "Loading..."
+    if (!students || !rubrics) return <Loading/>
 
     function changeHandler(e) {
         const studentID = parseInt(e.target.value);
