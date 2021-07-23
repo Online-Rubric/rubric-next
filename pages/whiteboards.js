@@ -36,9 +36,10 @@ export default function Whitebaords() {
 
     const cellClasses = "p-2 border border-black flex-1"
     const notesCellClasses = "p-2 border border-black flex-auto border-b-4"
-    const cellSectionClasses = "p-2 border border-black flex-1 bg-blue-300 font-bold text-center"
+    const cellSectionClasses = "w-full p-2 border-b border-t border-l border-black flex-1 bg-blue-300 font-bold text-center"
     const trClasses = "bg-gray-400 border-b-4 border-black border-solid w-full text-white"
     const cellChalClasses = "bg-gray-500 p-2 border border-black flex-1"
+    const cellEndClasses = "p-2 border-l border-b border-t border-black flex-1"
 
     return(
         <>
@@ -66,18 +67,19 @@ export default function Whitebaords() {
                 <>
                 <div className="flex flex-col flex-wrap">
                     <>
-                    <table key={rubric.id} id={rubric.id} className="p-2 my-4 bg-gray-100 border-4 border-black table-auto">
-                        <thead className="w-full" colspan="2">
+                    <table key={rubric.id} id={rubric.id} className="my-8 bg-gray-100 border-4 border-collapse border-black table-auto">
+                        <thead className="w-full">
                             <tr className={trClasses}>
                                 <th className={cellChalClasses} colspan="2">Challenge Attempted: {rubric.challenge}</th>
-                                <th className={cellClasses} colspan="2">Time Started: {rubric.time_start.toString()}</th>
-                                <th className={cellClasses} colspan="1">Time Ended: {rubric.time_end}</th>
+                                <th></th>
+                                <th className={cellClasses} colspan="1">Time Started: {rubric.time_start.toString()}</th>
+                                <th className={cellEndClasses} colspan="1">Time Ended: {rubric.time_end}</th>
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody className="p-2">
+                        <tbody className="">
                             <tr>
-                                <td className={cellSectionClasses}  colspan="5">Interpreted the Question</td>
+                                <td className={cellSectionClasses} colspan="6">Interpreted the Question</td>
                             </tr>
                             <tr>
                                 <td className={cellClasses}>Asked Clarifying Questions: {rubric.clarify_question}/2</td>
@@ -86,10 +88,10 @@ export default function Whitebaords() {
                                 <td className={cellClasses}>Optimal Structure: {rubric.optimal_structure}/4</td>
                             </tr>
                             <tr>
-                                <td className={notesCellClasses} colspan="5"><p>Notes: {rubric.interpret_question_notes}</p></td>
+                                <td className={notesCellClasses} colspan="6"><p>Notes: {rubric.interpret_question_notes}</p></td>
                             </tr>
                             <tr>
-                                <td className={cellSectionClasses}  colspan="5">Solved the technical problem</td>
+                                <td className={cellSectionClasses}  colspan="6">Solved the technical problem</td>
                             </tr>
                             <tr>
                                 <td className={cellClasses}>Presented a Working Algorithm: {rubric.working_algorithm}/4</td>
@@ -98,10 +100,10 @@ export default function Whitebaords() {
                                 <td className={cellClasses}>Code Was Best Solution: {rubric.best_solution}/2</td>
                             </tr>
                             <tr>
-                                <td className={notesCellClasses} colspan="5">Notes: {rubric.solve_problem_notes}</td>
+                                <td className={notesCellClasses} colspan="6">Notes: {rubric.solve_problem_notes}</td>
                             </tr>
                             <tr>
-                                <td className={cellSectionClasses}  colspan="5">Analyzed the proposed solution</td>
+                                <td className={cellSectionClasses}  colspan="6">Analyzed the proposed solution</td>
                             </tr>
                             <tr>
                                 <td className={cellClasses}>Walked Through Solution: {rubric.walkthrough_solution}/2</td>
@@ -109,23 +111,23 @@ export default function Whitebaords() {
                                 <td className={cellClasses}>Walkthrough Tests: {rubric.testing}/2</td>
                             </tr>
                             <tr>
-                                <td className={notesCellClasses} colspan="5">Notes: {rubric.analyze_solution_notes}</td>
+                                <td className={notesCellClasses} colspan="6">Notes: {rubric.analyze_solution_notes}</td>
                             </tr>
                             <tr>
-                                <td className={cellSectionClasses}  colspan="5">Communicated effectively throughout</td>
+                                <td className={cellSectionClasses}  colspan="6">Communicated effectively throughout</td>
+                            </tr>
+                            <tr colspan="5">
+                                <td className={cellClasses} colspan="1">Explained Thought Process: {rubric.thought_process}/6</td>
+                                <td className={cellClasses} colspan="1">Used Correct Terminology: {rubric.terminology}/2</td>
+                                <td className={cellClasses} colspan="1">Effective use of Time{rubric.use_time}/1</td>
+                                <td className={cellClasses} colspan="1">Not Overconfident: {rubric.overconfident}/1</td>
+                                <td className={cellEndClasses} colspan="1">Not Underconfident: {rubric.underconfident}/1</td>
                             </tr>
                             <tr>
-                                <td className={cellClasses}>Explained Thought Process: {rubric.thought_process}/6</td>
-                                <td className={cellClasses}>Used Correct Terminology: {rubric.terminology}/2</td>
-                                <td className={cellClasses}>Effective use of Time{rubric.use_time}/1</td>
-                                <td className={cellClasses}>Not Overconfident: {rubric.overconfident}/1</td>
-                                <td className={cellClasses}>Not Underconfident: {rubric.underconfident}/1</td>
+                                <td className={notesCellClasses} colspan="6">Notes: {rubric.communicate_effectively_notes}</td>
                             </tr>
                             <tr>
-                                <td className={notesCellClasses} colspan="5">Notes: {rubric.communicate_effectively_notes}</td>
-                            </tr>
-                            <tr>
-                                <td className={notesCellClasses} colspan="5">Comments: {rubric.comments}</td>
+                                <td className={notesCellClasses} colspan="6">Comments: {rubric.comments}</td>
                             </tr>
                         
                         </tbody>
