@@ -18,7 +18,7 @@ export default function Landing() {
                         <iframe src="https://player.vimeo.com/video/577943028?background=1&autoplay=1&loop=1&byline=0&title=0"
                             frameborder="0" allowFullScreen></iframe>
                     </div>
-                    <div className="px-3 py-4 bg-opacity-25 border-solid bg-gray-50">
+                    <div className="px-3 py-4 bg-opacity-25 border-solid bg-gray-50 drop-shadow-md">
                         <h1 className="text-6xl font-bold">
                             Welcome to{' '}
                         <h2 className="text-blue-500"> 
@@ -29,11 +29,11 @@ export default function Landing() {
                     <div className="flex px-6 py-10 mx-10 my-4 text-lg font-bold text-gray-800">
 
                         <Link href="/whiteboards">
-                            <button className="p-6 m-4 bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:border-blue-400 hover:text-blue-600">See Whiteboards</button>
+                            <button className="p-6 m-4 transition-colors bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:border-blue-400 hover:text-blue-600 drop-shadow">See Whiteboards</button>
                         </Link>
 
                         <Link href="/form">
-                            <button className="p-6 m-4 bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:border-blue-400 hover:text-blue-600">Grade a Student</button>
+                            <button className="p-6 m-4 transition-colors bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:border-blue-400 hover:text-blue-600 drop-shadow">Grade a Student</button>
                         </Link>
 
                     </div>
