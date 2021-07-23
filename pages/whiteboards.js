@@ -67,7 +67,7 @@ export default function Whitebaords() {
                 <>
                 <div className="flex flex-col flex-wrap">
                     <>
-                    <table key={rubric.id} id={rubric.id} className="my-8 bg-gray-100 border-4 border-collapse border-black table-auto">
+                    <table key={rubric.id} id={rubric.id} className="my-8 bg-gray-100 border-4 border-collapse border-black table-auto drop-shadow-xl">
                         <thead className="w-full">
                             <tr className={trClasses}>
                                 <th className={cellChalClasses} colspan="2">Challenge Attempted: {rubric.challenge}</th>
