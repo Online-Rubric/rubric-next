@@ -118,7 +118,7 @@ export default function RubricForm(props) {
 
 
     return (
-        <div className="mb-10 bg-gray-200 drop-shadow-lg">
+        <div className="mb-10 bg-gray-200 drop-shadow-2xl">
             <form onSubmit={submitHandler}>
                 <table className="table w-full p-4">
                     <thead className="flex flex-row flex-wrap p-4">
@@ -209,11 +209,11 @@ export default function RubricForm(props) {
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Interpreted the Question</td>
 
                         </tr>
-                        <tr className="flex justify-start p-1 border-l border-r border-black">
+                        <tr className="flex justify-start p-1 border-black">
                             <td className="flex-auto">Notes</td>
                         </tr>
-                        <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid">
-                            <td className="flex-auto my-3"><input className="w-1/2 p-1" name="interpret_question_notes" id="interpret_question_notes" type="text" /></td>
+                        <tr className="flex justify-start border-b-4 border-black border-solid">
+                            <td className="flex-auto my-3" colSpan="3"><input className="w-1/2 p-1" name="interpret_question_notes" id="interpret_question_notes" type="text" /></td>
                         </tr>
                         {/* start section */}
                         {/* -----Solved the technical problem----- */}
@@ -261,11 +261,11 @@ export default function RubricForm(props) {
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Solved the technical problem</td>
 
                         </tr>
-                        <tr className="flex justify-start p-1 border-l border-r border-black">
+                        <tr className="flex justify-start p-1 border-black">
                             <td className="flex-auto">Notes</td>
                         </tr>
-                        <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid">
-                            <td className="flex-auto my-3">
+                        <tr className="flex justify-start border-b-4 border-black border-solid">
+                            <td className="flex-auto my-3" colspan="3">
                                 <input className="w-1/2 p-1" name="solve_problem_notes" id="solve_problem_notes" type="text" />
                             </td>
                         </tr>
@@ -310,11 +310,11 @@ export default function RubricForm(props) {
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Analyzed the proposed solution</td>
 
                         </tr>
-                        <tr className="flex justify-start p-1 border-l border-r border-black">
+                        <tr className="flex justify-start p-1 border-black">
                             <td className="flex-auto">Notes</td>
                         </tr>
-                        <tr className="flex justify-start border-b-4 border-l border-r border-black border-solid ">
-                            <td className="flex-auto my-3"><input className="w-1/2 p-1" name="analyze_solution_notes" id="analyze_solution_notes" type="text" /></td>
+                        <tr className="flex justify-start border-b-4 border-black border-solid ">
+                            <td className="flex-auto my-3" colspan="3"><input className="w-1/2 p-1" name="analyze_solution_notes" id="analyze_solution_notes" type="text" /></td>
                         </tr>
                         {/* start section */}
                         {/* -----Communicated effectively throughout----- */}
@@ -385,29 +385,29 @@ export default function RubricForm(props) {
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Communicated effectively throughout</td>
 
                         </tr>
-                        <tr className="flex justify-start p-1 py-2 border-l border-r border-black">
+                        <tr className="flex justify-start p-1 py-2 border-black">
                             <td className="flex-auto">Notes</td>
                         </tr>
-                        <tr className="flex justify-start pb-5 border-b-4 border-l border-r border-black border-solid">
-                            <td className="flex-auto my-3"><input className="w-1/2 p-1" name="communicate_effectively_notes" id="communicate_effectively_notes" type="text" /></td>
+                        <tr className="flex justify-start pb-5 border-b-4 border-black border-solid">
+                            <td className="flex-auto my-3" colspan="3"><input className="w-1/2 p-1" name="communicate_effectively_notes" id="communicate_effectively_notes" type="text" /></td>
                         </tr>
                         {/* general notes */}
-                        <tr className="flex justify-start p-1 py-2 border-l border-r border-black">
+                        <tr className="flex justify-start p-1 py-2 border-black">
                             <td className="flex-auto">General Comments</td>
                         </tr>
-                        <tr className="flex justify-start pb-5 border-b-4 border-l border-r border-black border-solid">
-                            <td className="flex-auto my-3">
+                        <tr className="flex justify-start pb-5 border-b-4 border-black border-solid">
+                            <td className="flex-auto my-3" colspan="3">
                                 <input className="w-1/2 p-1" name="comments" id="comments" type="text" />
                             </td>
                         </tr>
                         <tr className="flex bg-blue-300 border-b-4 border-black border-solid space-between">
-                            <td className="flex-1 border-r border-black border-solid">Points Earned</td>
-                            <td className="flex-1 border-r border-black border-solid">Points Possible</td>
+                            <td className="flex-1 border-black border-solid">Points Earned</td>
+                            <td className="flex-1 border-black border-solid">Points Possible</td>
                         </tr>
                         <tr className="flex justify-start text-gray-800 border-b-4 border-black">
 
                             <td className="flex-1 border-r border-black border-solid">{totalScore()}</td>
-                            <td className="items-center flex-1 border-r border-black border-solid justify-centerborder-b">40</td>
+                            <td className="items-center flex-1 border-black border-solid justify-centerborder-b">40</td>
                         </tr>
                         {/* submit button */}
                         <button className="px-20 py-3 my-3 mt-10 transition duration-500 ease-in-out transform bg-green-500 rounded mt-text-white hover:bg-green-400 w-max hover:text-black hover:-translate-y-1 hover:scale-110">Submit</button>
