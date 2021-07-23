@@ -29,11 +29,11 @@ export default function Landing() {
                     <div className="flex px-6 py-10 mx-10 my-4 text-lg font-bold text-gray-800">
 
                         <Link href="/whiteboards">
-                            <button className="p-6 m-4 transition-colors bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:border-blue-400 hover:text-blue-600 drop-shadow">See Whiteboards</button>
+                            <button className="p-6 m-4 transition duration-500 ease-in-out transform bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:-translate-y-1 hover:scale-110 hover:border-blue-400 hover:text-blue-600 drop-shadow">See Whiteboards</button>
                         </Link>
 
                         <Link href="/form">
-                            <button className="p-6 m-4 transition-colors bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:border-blue-400 hover:text-blue-600 drop-shadow">Grade a Student</button>
+                            <button className="p-6 m-4 transition duration-500 ease-in-out transform bg-blue-100 bg-opacity-25 border-2 border-gray-600 hover:-translate-y-1 hover:scale-110 hover:border-blue-400 hover:text-blue-600 drop-shadow">Grade a Student</button>
                         </Link>
 
                     </div>
