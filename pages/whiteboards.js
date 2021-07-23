@@ -27,6 +27,7 @@ export default function Whitebaords() {
         setCurrentRubrics(newRubrics);
     }
 
+
     function handleSelect(e) {
         window.location = process.env.ROOT + "whiteboards#" + e.target.value;
         // window.location = "http://localhost:3000/whiteboards#" + e.target.value;
@@ -71,6 +72,7 @@ export default function Whitebaords() {
                                 <th className={cellChalClasses} colspan="2">Challenge Attempted: {rubric.challenge}</th>
                                 <th className={cellClasses} colspan="2">Time Started: {rubric.time_start.toString()}</th>
                                 <th className={cellClasses} colspan="1">Time Ended: {rubric.time_end}</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody className="p-2">

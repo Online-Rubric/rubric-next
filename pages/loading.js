@@ -9,8 +9,8 @@ export default function Loading() {
         <div className="flex flex-col items-center justify-start w-full min-h-screen bg-gray-300 ">
             <Header/>
             <Nav/>
-                <main className="container flex items-center justify-center w-full h-full my-5">
-                    <img src={loadingGif8.src} className="inline-block mt-20"/>
+                <main className="absolute z-20 flex items-center justify-center w-screen h-screen bg-gray-500 bg-opacity-50">
+                    <img src={loadingGif8.src} className="inline-block"/>
                 </main>
             <FixedFooter/>
         </div>
