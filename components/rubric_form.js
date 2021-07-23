@@ -122,11 +122,11 @@ export default function RubricForm(props) {
             <form onSubmit={submitHandler}>
                 <table className="table w-full p-4">
                     <thead className="flex flex-row flex-wrap p-4">
-                        <tr className="flex flex-row justify-between w-full p-2 m-auto bg-gray-400 border-b-4 border-black border-solid flex-nowrap">
+                        <tr className="flex flex-row justify-center w-full p-2 m-auto bg-gray-400 border-b-4 border-black border-solid flex-nowrap">
                             <th className="px-2">Student</th>
                             <th className="">
                                 {/* <input name="student" id="student" type="select" /> */}
-                                <select className="flex items-center justify-center p-1" name="student">
+                                <select className="flex items-center justify-center p-1 mr-4" name="student">
                                     <option value={0}>---</option>
                                     {props.students.map(student => (
                                         <option key={student.id} value={student.id}>{student.username}</option>
@@ -138,7 +138,7 @@ export default function RubricForm(props) {
                             <th className="">
                                 {/* <input name="proctor" id="proctor" type="text" />
                              */}
-                                <select className="flex items-center justify-center p-1" name="proctor">
+                                <select className="flex items-center justify-center p-1 mr-4" name="proctor">
                                     <option value={0}>---</option>
                                     {props.proctors.map(proctor => (
                                         <option key={proctor.id} value={proctor.id}>{proctor.username}</option>
