@@ -205,7 +205,7 @@ export default function RubricForm(props) {
 
                         </tr>
                         <tr className="flex justify-center text-gray-800 bg-blue-300 border-b-4 border-r border-black">
-                            <td className="flex items-center justify-center flex-1 border-b border-black border-solid">{getCategoryScore('interpretQuestion')}</td>
+                            <td className="flex items-center justify-center flex-1 border-b border-r border-black border-solid">{getCategoryScore('interpretQuestion')}</td>
                             <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">10</td>
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Interpreted the Question</td>
 
@@ -257,7 +257,7 @@ export default function RubricForm(props) {
 
                         </tr>
                         <tr className="flex justify-start text-gray-800 bg-blue-300 border-b-4 border-black">
-                            <td className="flex items-center justify-center flex-1 border-b border-black border-solid">{getCategoryScore('solveProblem')}</td>
+                            <td className="flex items-center justify-center flex-1 border-b border-r border-black border-solid">{getCategoryScore('solveProblem')}</td>
                             <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">12</td>
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Solved the technical problem</td>
 
@@ -306,7 +306,7 @@ export default function RubricForm(props) {
 
                         </tr>
                         <tr className="flex justify-start text-gray-800 bg-blue-300 border-b-4 border-black">
-                            <td className="flex items-center justify-center flex-1 border-b border-black border-solid">{getCategoryScore('analyzeSolution')}</td>
+                            <td className="flex items-center justify-center flex-1 border-b border-r border-black border-solid">{getCategoryScore('analyzeSolution')}</td>
                             <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">6</td>
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Analyzed the proposed solution</td>
 
@@ -381,7 +381,7 @@ export default function RubricForm(props) {
                         </tr>
                         <tr className="flex justify-start text-gray-800 bg-blue-300 border-b-4 border-black">
 
-                            <td className="flex items-center justify-center flex-1 border-b border-black border-solid">{getCategoryScore('communicate')}</td>
+                            <td className="flex items-center justify-center flex-1 border-b border-r border-black border-solid">{getCategoryScore('communicate')}</td>
                             <td className="flex items-center justify-center w-48 border-b border-r border-black border-solid">12</td>
                             <td className="w-1/2 px-1 py-2 font-bold text-left border-b border-black border-solid">Communicated effectively throughout</td>
 
