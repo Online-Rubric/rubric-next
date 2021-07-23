@@ -34,7 +34,7 @@ export default function Form() {
                 <Nav/>
 
                 <main className="flex flex-col items-center justify-center flex-1 w-full px-20 mt-10 text-center">
-                    <h1 className="mb-5 text-6xl font-bold">
+                    <h1 className="mb-5 text-6xl font-bold drop-shadow-md">
                        New Rubric
                     </h1>
                     <RubricForm apiPost={apiPost} students={students} proctors={proctors}/>

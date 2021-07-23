@@ -11,11 +11,11 @@ export default function Nav() {
                         <a className="mr-4">Admin View</a>
                     </Link> */}
                     <Link href={randomChallenges()} onClick={() => window.location.reload()}>
-                        <a target='_blank' className="ml-2 mr-2 text-lg font-semibold text-gray-900 transition-colors hover:text-blue-200">Get Challenges</a>
+                        <a target='_blank' className="p-2 ml-2 mr-2 text-lg font-semibold text-gray-900 transition-colors hover:text-blue-200 hover:border border-gray-50">Get Challenges</a>
                     </Link>
                    
                     <Link href="/about">
-                        <a className="ml-2 text-lg text-gray-900 transition-colors hover:text-blue-200">About us</a>
+                        <a className="ml-2 mr-2 text-lg text-gray-900 transition-colors hover:text-blue-200">About us</a>
                     </Link>
                     <Link href="https://github.com/Online-Rubric">
                         <button className="p-2 ml-4 text-blue-100 transition-colors border-2 border-gray-900 hover:border-blue-200 hover:text-gray-900 drop-shadow" target="_blank">See on Github</button>

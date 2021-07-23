@@ -118,7 +118,7 @@ export default function RubricForm(props) {
 
 
     return (
-        <div className="mb-10 bg-gray-200">
+        <div className="mb-10 bg-gray-200 drop-shadow-lg">
             <form onSubmit={submitHandler}>
                 <table className="table w-full p-4">
                     <thead className="flex flex-row flex-wrap p-4">
@@ -150,7 +150,7 @@ export default function RubricForm(props) {
                                 <input className="flex items-center justify-center p-1" name="challenge" id="challenge" type="text" />
                             </th>
                         </tr>
-                        <tr>
+                        <tr className="flex items-center justify-center w-full mt-2">
                             <th className="px-2">Start Time</th>
                             <th className="">
                                 <input className="p-1 " name="time_start" id="time_start" type="datetime-local" />
@@ -410,7 +410,7 @@ export default function RubricForm(props) {
                             <td className="items-center flex-1 border-r border-black border-solid justify-centerborder-b">40</td>
                         </tr>
                         {/* submit button */}
-                        <button className="px-20 py-3 my-3 mt-10 bg-green-500 rounded mt-text-white hover:bg-green-400 w-max hover:text-black">Submit</button>
+                        <button className="px-20 py-3 my-3 mt-10 transition duration-500 ease-in-out transform bg-green-500 rounded mt-text-white hover:bg-green-400 w-max hover:text-black hover:-translate-y-1 hover:scale-110">Submit</button>
 
                     </tbody>
                 </table>
